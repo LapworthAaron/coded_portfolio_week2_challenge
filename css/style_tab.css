@@ -11,7 +11,7 @@
 	--quinary_colour_rgb: 29, 53, 87;	
 }
 
-@media screen and (min-width: 1008px) {
+@media screen and (min-width: 641px) and (max-width: 1007px) {
 
 	/* all elements using flex, wrap and in rows */
 	.top_nav_bar,
@@ -88,7 +88,7 @@
 		top: 14%;
 		animation: typing 5s steps(20, end) forwards infinite, blink .6s infinite;
 		width: 0;
-		
+
 	}
 
 	/* typing animation */
