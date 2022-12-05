@@ -62,22 +62,26 @@
 
 	/* background for the typing animation */
 	.hero_banner {
-		height: 60px;
+		height: 36px;
 		position: relative;
 		background-color: var(--quaternary_colour);
-		background-position: center;
+	}
+
+	#hero_div {
+		width: 100%;
 	}
 
 	/* all things text and typing animation related in hero banner */
 	#hero_title {
 		color: var(--secondary_colour);
 		font-family: 'courier new';
-		font-size: 40px;
+		font-size: 15x;
 		overflow: hidden;
 		white-space: nowrap;
 		border-right: 10px solid var(--secondary_colour);
-		position: relative;
-		top: 14%;
+		text0a
+		/* position: relative;
+		top: 14%; */
 		animation: typing 5s steps(20, end) forwards infinite, blink .6s infinite;
 		width: 0;
 	}
