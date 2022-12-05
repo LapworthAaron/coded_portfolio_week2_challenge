@@ -12,21 +12,20 @@
 }
 
 @media screen and (min-width: 641px) and (max-width: 1007px) {
-
 	/* all elements using flex, wrap and in rows */
 	.top_nav_bar,
 	.page_sections,
-	#about_me_details,
-	#con_link_section {
+	#about_me_details
+	 {
 		display: flex;
 		flex-wrap: wrap;
-		flex-direction: row;
+		flex-direction: column;
 	}
 
 	/* the navigation bar and define flex properites*/
 	.top_nav_bar {
 		align-items: center;
-		justify-content: flex-end;
+		justify-content: flex-start;
 		min-height: 100px;
 		background-color: var(--quinary_colour);
 		color: var(--secondary_colour);
@@ -34,8 +33,6 @@
 
 	/* pull my name out seperately from the other elements in the nav bar */
 	#name {
-		position: absolute;
-		left: 2%;
 		font-weight: bolder;
 		font-size: 50px;
 	}
@@ -63,24 +60,17 @@
 
 	/* background for the typing animation */
 	.hero_banner {
-		height: 200px;
+		height: 60px;
 		position: relative;
 		background-color: var(--quaternary_colour);
 		background-position: center;
-	}
-
-	/* position the container for my typing animation */
-	#hero_div {
-		position: absolute;
-		top:30px;
-		left: 30px;
 	}
 
 	/* all things text and typing animation related in hero banner */
 	#hero_title {
 		color: var(--secondary_colour);
 		font-family: 'courier new';
-		font-size: 100px;
+		font-size: 40px;
 		overflow: hidden;
 		white-space: nowrap;
 		border-right: 10px solid var(--secondary_colour);
@@ -88,14 +78,13 @@
 		top: 14%;
 		animation: typing 5s steps(20, end) forwards infinite, blink .6s infinite;
 		width: 0;
-
 	}
 
 	/* typing animation */
 	@keyframes typing {
 		0% {width: 0}
-		80% {width: 100%}
-		100% {width: 100%}
+		80% {width: 79%}
+		100% {width: 79%}
 	}
 
 	/* cursor animation for typing */
@@ -106,35 +95,39 @@
 
 	/* page section postioning */
 	.page_sections {
-		margin: 2% 2% 1% 2%;
+		margin: 5% 2% 1% 2%;
 		justify-content: center;
+		align-items: center;
 	}
 
 	/* position, size and colour the section headers on the page */
 	.section_header {
-		width: 140px;
-		border-right: 3px solid var(--quinary_colour);
+		width: 500px;
+		border-bottom: 3px solid var(--quinary_colour);
 		color: var(--quinary_colour);
 		font-weight: bolder;
 		font-size: 20px;
 		padding: 5px;
-		background-image: linear-gradient(270deg,
+		background-image: linear-gradient(360deg,
 							rgba(var(--primay_colour_rgb), 1) 0%,
 							rgba(var(--primay_colour_rgb), 0.0) 100%
 		);
 		text-shadow: 2px 2px 4px var(--secondary_colour);
+		text-align: center;
+		margin-bottom: 3%;
 	}
 
 	/* size and poistion the section detail elements */
 	.section_details {
 		margin: 1% 1% 1% 1%;
-		width: 80%;
+		width: 90%;
 		font-weight: bolder;
 	}
 
 	/* setup the about section detail as a flex box for image and text inline */
 	#about_me_details {
 		justify-content: flex-start;
+		align-items: center;
 	}
 
 	/* set image as a circle and size and position */
@@ -146,28 +139,26 @@
 
 	/* position and size the about me paragraph text */
 	#about_me_details p {
-		width: 70%;
+		width: 90%;
 		align-self: center;
 	}
 
 	/* setup a CSS grid for the portfolio cards */
 	.work_cards {
 		display: grid;
-		grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
-		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+		grid-template-columns: 1fr;
 		grid-template-areas:
-			"css_cheatsheet css_cheatsheet css_cheatsheet css_cheatsheet"
-			"css_cheatsheet css_cheatsheet css_cheatsheet css_cheatsheet"
-			"css_cheatsheet css_cheatsheet css_cheatsheet css_cheatsheet"
-			"furniture_store furniture_store jakes_eatery jakes_eatery"
-			"furniture_store furniture_store jakes_eatery jakes_eatery"
-			"week1_challenge week1_challenge landing_page landing_page"
-			"week1_challenge week1_challenge landing_page landing_page"
-			"study_guide study_guide study_guide study_guide"
-			"study_guide study_guide study_guide study_guide"
+			"css_cheatsheet"
+			"css_cheatsheet"
+			"furniture_store"
+			"jakes_eatery"
+			"week1_challenge"
+			"landing_page"
+			"study_guide"
 		;
 		grid-gap: 50px;
-		height: 1000px;
+		height: 1250px;
 	}
 
 	/* setup the grid for the each individual work card and decorate */
@@ -271,9 +262,10 @@
 	/* set the contact links elements to be a flexbox */
 	#con_link_section {
 		display: flex;
+		flex-direction: row;
 		justify-content: space-evenly;
 		flex-wrap: wrap;
-		
+		align-items: center;
 	}
 
 	/* set a sub flexbox for the image and name of each contact type and decorate */
@@ -286,7 +278,7 @@
 		color: var(--primary_colour);
 		font-weight: bolder;
 		font-size: large;
-		flex-direction: row;
+		justify-content: center;
 	}
 
 	#copyright {

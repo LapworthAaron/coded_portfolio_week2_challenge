@@ -78,7 +78,7 @@
 		border-right: 10px solid var(--secondary_colour);
 		position: relative;
 		top: 14%;
-		animation: typing 15s steps(20, end) forwards infinite, blink .6s infinite;
+		animation: typing 5s steps(20, end) forwards infinite, blink .6s infinite;
 		width: 0;
 	}
 
@@ -141,7 +141,7 @@
 
 	/* position and size the about me paragraph text */
 	#about_me_details p {
-		width: 70%;
+		width: 90%;
 		align-self: center;
 	}
 
