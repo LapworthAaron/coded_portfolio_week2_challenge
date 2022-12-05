@@ -1,0 +1,291 @@
+/* Variables */
+:root {
+	--primary_colour: #E63946;
+	--secondary_colour: #F1FAEE;
+	--tertiary_colour: #A8DADC;
+	--quaternary_colour: #457B9D;
+	--quinary_colour: #1D3557;
+	--quaternary_colour_rgb: 69, 123, 157;
+	--quinary_colour_rgb: 29, 53, 87;
+	--tertiary_colour_rgb: 168, 218, 220;
+}
+
+* {
+  	box-sizing: border-box;
+}
+
+.top_nav_bar {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	min-height: 100px;
+	background-color: var(--quinary_colour);
+	color: var(--secondary_colour);
+}
+
+#name {
+	position: absolute;
+	left: 2%;
+	font-weight: bolder;
+}
+
+.nav_links {
+	margin-right: 5%;
+	color: var(--primary_colour);
+	font-weight: bolder;
+	font-size: large;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	line-height: 1.5;
+}
+
+.hero_banner {
+	height: 200px;
+	background-color: var(--quaternary_colour);
+	background-repeat: no-repeat;
+    background-position: center;
+	background-size: cover;
+	position: relative;
+}
+
+#hero_div {
+	position: absolute;
+	top:30px;
+	left: 30px;
+	/* width: 1000px; */
+	/* height: 50px; adjust to 50% */
+	display: inline-block;
+}
+
+#hero_title {
+	color: var(--seconday_colour);
+	font-family: 'courier new';
+	font-size: 100px;
+	overflow: hidden;
+	white-space: nowrap;
+	
+	border-right: 10px solid var(--secondary_colour);
+	/* text-align: center; */
+	position: relative;
+	top: 14%;
+	animation: typing 5s steps(20, end) forwards infinite, blink .6s infinite;
+	width: 0;
+	
+}
+
+@keyframes typing {
+	/* from { width: 0 }
+	to { width: 100% } */
+	0% {width: 0}
+	80% {width: 100%}
+	100% {width: 100%}
+}
+
+@keyframes blink {
+	from { border-color: transparent }
+	to { border-color:  var(--secondary_colour); }
+  }
+
+
+.page_sections {
+	margin: 1% 2% 1% 2%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.section_header {
+	width: 140px;
+	border-right: 3px solid var(--quinary_colour);
+	color: var(--quinary_colour);
+	font-weight: bolder;
+	font-size: 20px;
+	padding: 5px;
+	background-image: linear-gradient(270deg,
+                        rgba(var(--tertiary_colour_rgb), 1) 0%,
+                        rgba(var(--tertiary_colour_rgb), 0.0) 100%
+    );
+	text-shadow: 2px 2px 4px var(--secondary_colour);
+}
+
+.section_details {
+	margin: 0 1% 1% 1%;
+	width: 80%;
+}
+
+#about_me_details {
+	display: flex;
+    justify-content: flex-start;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+#profile_image {
+	border-radius: 100%;
+	width: 300px;
+	margin: 0 20px 0 10px;
+}
+
+#about_me_details p {
+	width: 70%;
+	align-self: center;
+}
+
+.work_cards {
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-areas:
+		"css_cheatsheet css_cheatsheet css_cheatsheet css_cheatsheet"
+		"css_cheatsheet css_cheatsheet css_cheatsheet css_cheatsheet"
+		"css_cheatsheet css_cheatsheet css_cheatsheet css_cheatsheet"
+		"furniture_store furniture_store jakes_eatery jakes_eatery"
+		"furniture_store furniture_store jakes_eatery jakes_eatery"
+		"week1_challenge week1_challenge landing_page landing_page"
+		"week1_challenge week1_challenge landing_page landing_page"
+		"study_guide study_guide study_guide study_guide"
+		"study_guide study_guide study_guide study_guide"
+	;
+	grid-gap: 10px;
+	height: 900px;
+}
+
+.indi_cards {
+	/* height: 200px; */
+	cursor: pointer;
+	display: grid;
+    align-content: end;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	text-decoration: none;	
+	/* border: 5px solid var(--primary_colour); */
+}
+
+.card_text {
+	background-color: rgba(var(--quaternary_colour_rgb),0.9);
+    padding: 15px;
+    height: 85px;
+    color: white;
+    font-size: 18px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+}
+
+.card_text p {
+	font-size: 14px;
+}
+
+#css_cheatsheet {
+	grid-area: css_cheatsheet;
+	background-image: url("../images/css_cheatsheet.png");
+	background-repeat: no-repeat;
+    background-position: top;
+	background-size: cover;
+	
+	
+}
+
+#jakes_eatery {
+	grid-area: jakes_eatery;
+	background-image: url("../images/jakes_eatery.png");
+	background-repeat: no-repeat;
+    background-position: top;
+	background-size: cover;
+}
+
+#furniture_store {
+	grid-area: furniture_store;
+	background-image: url("../images/furniture_store.png");
+	background-repeat: no-repeat;
+    background-position: top;
+	background-size: cover;
+}
+
+#week1_challenge {
+	grid-area: week1_challenge;
+	background-image: url("../images/week1_challenge.png");
+	background-repeat: no-repeat;
+    background-position: top;
+	background-size: cover;
+}
+
+#landing_page {
+	grid-area: landing_page;
+	background-image: url("../images/landing_page.png");
+	background-repeat: no-repeat;
+    background-position: top;
+	background-size: cover;
+}
+
+#study_guide {
+	grid-area: study_guide;
+	background-image: url("../images/prework_study_guide.png");
+	background-repeat: no-repeat;
+    background-position: top;
+	background-size: cover;
+}
+
+
+#css_cheatsheet:hover,
+#jakes_eatery:hover,
+#furniture_store:hover,
+#week1_challenge:hover,
+#landing_page:hover,
+#study_guide:hover {
+    box-shadow: inset 0px 0px 0px 
+		var(--quinary_colour), 0 0 30px 
+		var(--quinary_colour);
+	cursor: pointer;
+	/* change the backgrounf image to denote you are hovering over it */
+	background-color: var(--quaternary_colour);
+	background-blend-mode: exclusion;
+}
+
+.card_text:hover,
+#css_cheatsheet:hover .card_text,
+#jakes_eatery:hover .card_text,
+#furniture_store:hover .card_text,
+#week1_challenge:hover .card_text,
+#landing_page:hover .card_text,
+#study_guide:hover .card_text {
+	height: 175%;
+	height: 125px;
+	transition: all 0.5s ease-in-out;
+	overflow-y: hidden;
+}
+
+#con_link_section {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+
+.contact_links {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+	text-decoration: none;
+}
+
+.contact_links p {
+	color: var(--primary_colour);
+	font-weight: bolder;
+	font-size: large;
+	flex-direction: row;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  	margin: 0;
+}
