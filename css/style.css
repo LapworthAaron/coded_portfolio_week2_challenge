@@ -281,7 +281,6 @@
 		color: var(--primary_colour);
 		font-weight: bolder;
 		font-size: large;
-		flex-direction: row;
 	}
 
 	#copyright {
