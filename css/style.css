@@ -87,8 +87,8 @@
 	/* typing animation */
 	@keyframes typing {
 		0% {width: 0}
-		80% {width: 100%}
-		100% {width: 100%}
+		80% {width: 74%}
+		100% {width: 74%}
 	}
 
 	/* cursor animation for typing */

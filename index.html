@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Aaron Lapworth // Web Developer</title>
-  <link rel="stylesheet" href="./css/style_reset.css" />
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="./css/style_mob.css" />
-  <link rel="stylesheet" href="./css/style_tab.css" />
+  <link rel="stylesheet" href="./css/style_reset.css" />  <!-- reset css styles -->
+  <link rel="stylesheet" href="./css/style.css" />  <!-- desktop css styles -->
+  <link rel="stylesheet" href="./css/style_mob.css" />  <!-- mobile css styles -->
+  <link rel="stylesheet" href="./css/style_tab.css" />  <!-- tablet css styles -->
 </head>
 
 <body>
@@ -35,10 +35,12 @@
 
 	<main class="page_wrapper">
 
+		<!-- about me section of the main tag, this will be flex box -->
 		<section id="about_me" class="page_sections">
 			<div class="section_header">
 				<h3>About Me</h3>
 			</div>
+			<!-- detail which contains an image of me and text about me. this will be a flexbox -->
 			<div id="about_me_details" class="section_details">
 				<img id="profile_image" src="./images/picofme.png" alt="image of Aaron Lapworth">
 				<p>
@@ -54,12 +56,15 @@
 			</div>
 		</section>
 
+		<!-- my portfolio, represented as cards in a grid, that sits in a flex box -->
 		<section id="my_work" class="page_sections">
 			<div class="section_header">
 				<h3>My Work</h3>
 			</div>
-			<!-- first project card -->
+			<!-- this section is a grid and contains all my portfolio cards -->
 			<section class="work_cards section_details">
+				<!-- each card is a hyperlinked element that contains an image and a title and description overlay -->
+				<!-- copy and past an existing a tag and it's children to create a new card, the grid will also need updating in CSS -->
 				<a href="https://lapworthaaron.github.io/css_cheatsheet/" id="css_cheatsheet" class="indi_cards" aria-label="Link to CSS Cheatsheet project">
 					<div class="card_text">
 						<h4 class="proj_name">CSS Cheatsheet</h4>
@@ -102,7 +107,7 @@
 	</main>
 
 	<footer>
-		<!-- contact -->
+		<!-- contact me foot with email, github and linkedin links-->
 		<section id="contact_me" class="page_sections">
 			<div class="section_header">
 				<h3>Contact Me</h2>
